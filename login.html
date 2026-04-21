@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | E-Jobs Go</title>
+    <link rel="stylesheet" href="assets/css/styles.css?v=4">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="text-center mb-1">
+                <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 1.5rem;">
+                    <span class="gradient-text">E-Jobs Go</span>
+                </a>
+                <h2>Welcome Back</h2>
+                <p class="text-secondary" style="margin-bottom: 2rem;">Log in to access your dashboard</p>
+            </div>
+            
+            <div id="alert-msg" class="alert"></div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Log In</button>
+            </form>
+            
+            <div class="text-center mt-2" style="margin-top: 2rem;">
+                <p class="text-secondary">Don't have an account? <a href="register.html">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container footer-content">
+            <p>2026 &copy; Copyright all rights reserved</p>
+            <p>Developed by <strong>'Pro-Tech'</strong></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

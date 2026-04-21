@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | E-Jobs Go</title>
+    <link rel="stylesheet" href="assets/css/styles.css?v=4">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper" style="max-width: 100%; padding: 0 2rem;">
+            <nav>
+                <div class="logo">
+                    <span class="gradient-text">E-Jobs Go</span>
+                </div>
+                <div class="nav-links">
+                    <span id="user-name" style="font-weight: 600; margin-right: 1rem;"></span>
+                    <button id="logout-btn" class="btn btn-outline" style="padding: 0.5rem 1rem;">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <!-- Navigation injected via JS based on role -->
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div id="alert-msg" class="alert"></div>
+
+            <div id="content-area">
+                <!-- Content injected via JS based on active tab -->
+                <div class="text-center" style="padding: 4rem;">
+                    <h2 class="gradient-text">Loading Dashboard...</h2>
+                </div>
+            </div>
+            
+            <footer>
+                <div class="container footer-content">
+                    <p>2026 &copy; Copyright all rights reserved</p>
+                    <p>Developed by <strong>'Pro-Tech'</strong></p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="job-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index: 2000; align-items:center; justify-content:center;">
+        <div class="card" style="width: 100%; max-width: 500px; position:relative; background: var(--bg-secondary);">
+            <button onclick="document.getElementById('job-modal').style.display='none'" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--text-primary);">&times;</button>
+            <h2 id="modal-title" style="margin-bottom: 1.5rem;">Post a New Job</h2>
+            <form id="job-form">
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <input type="text" id="job-title" class="form-control" required placeholder="e.g. Need a math tutor">
+                </div>
+                <div class="form-group">
+                    <label for="job-category">Category</label>
+                    <select id="job-category" class="form-control" required>
+                        <option value="">Select a category</option>
+                        <option value="Tutoring">Tutoring</option>
+                        <option value="Repairs">Repairs & Maintenance</option>
+                        <option value="Deliveries">Deliveries</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="IT Support">IT Support</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="job-budget">Budget ($)</label>
+                    <input type="number" id="job-budget" class="form-control" placeholder="Optional">
+                </div>
+                <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="job-remote" style="width: 1.25rem; height: 1.25rem;">
+                    <label for="job-remote" style="margin: 0;">This job can be done remotely</label>
+                </div>
+                <div class="form-group">
+                    <label for="job-desc">Description</label>
+                    <textarea id="job-desc" class="form-control" rows="4" required placeholder="Describe what you need..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Post Job</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
